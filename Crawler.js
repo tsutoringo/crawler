@@ -4,10 +4,9 @@ const url            = require('url');
 const xml            = require('xml');
 
 class Crawler extends EventEmitter {
-    constructor (baseURL, cooldown) {
+    constructor (baseURL) {
         super();
         this.baseURL = new URL(baseURL);
-        this.cooldown = cooldown;
         this.scanned = new Map();
         this.ignoreHash = true
     }
